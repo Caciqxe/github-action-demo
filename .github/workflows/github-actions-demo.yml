@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'hola'
-      - run: |
+        run: |
           echo "The GitHub Action Secret will be masked:  "
           echo ${{secrets.secreto_prueba.name}}
           echo "Trick to echo GitHub Actions Secret:  "
