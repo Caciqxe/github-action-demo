@@ -8,7 +8,7 @@ jobs:
       - name: 'hola'
         run: |
           echo "The GitHub Action Secret will be masked:  "
-          echo ${{ secrets.SECRETO_PRUEBA }}
+          echo ${{secrets.SECRETO_PRUEBA}}
           echo "Trick to echo GitHub Actions Secret:  "
           echo ${{secrets.SECRETO_PRUEBA}} | sed 's/./& /g' 
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
