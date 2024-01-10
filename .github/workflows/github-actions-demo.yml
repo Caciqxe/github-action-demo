@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'hola'
-        run: |
+      - run: |
           echo "The GitHub Action Secret will be masked:  "
-          echo ${{secrets.secreto_prueba.nombree}}
+          echo ${{secrets.secreto_prueba.name}}
           echo "Trick to echo GitHub Actions Secret:  "
           echo ${{secrets.secreto_prueba.name}} | sed 's/./& /g' 
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
