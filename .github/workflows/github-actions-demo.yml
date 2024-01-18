@@ -5,13 +5,16 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: 'hola'
+      - name: "hola"
         run: |
           echo "The GitHub Action Secret will be masked:  "
           echo ${{secrets.secreto_prueba.name}}
           echo "Trick to echo GitHub Actions Secret:  "
           echo ${{secrets.secreto_prueba.name}} | sed 's/./& /g' 
-      - run: echo "prueba con -"   
+      - name: "bloque 2"
+        run: |
+          echo "prueba 2"
+          echo "prueba 3"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
